@@ -330,228 +330,117 @@ a:focus-visible,
 
 /* ==========================================================
    05 — PREMIUM HEADER
+   LEFT LOGO + HORIZONTAL NAVIGATION
 ========================================================== */
 
 .site-header {
-
   position: relative;
-
   z-index: 100;
-
-  min-height: 158px;
-
   background: var(--ivory);
-
   isolation: isolate;
-
 }
 
-/* Floral artwork */
+/* Floral decoration in the left corner */
 
 .site-header::before {
-
   content: "";
-
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 
+  width: 145px;
+  height: 120px;
+
+  background: url("Floral.png") no-repeat top left;
+  background-size: 290px auto;
+
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Header layout */
+
+.navigation-bar {
+  position: relative;
   z-index: 1;
 
-  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 
-  left: 0;
-
-  width: 330px;
-
-  height: 245px;
-
-  background-image: url("Floral.png");
-
-  background-repeat: no-repeat;
-
-  background-size: 660px 440px;
-
-  background-position: top left;
-
-  pointer-events: none;
-
+  min-height: 125px;
+  padding: 15px 35px;
 }
 
-/* Hide the previous gradient decorations */
-
-.header-decoration {
-  display: none;
-}
-
-/* Centered brand */
+/* Logo on the left */
 
 .brand-area {
+  position: relative;
+  z-index: 2;
 
-  position: absolute;
-
-  z-index: 5;
-
-  top: 8px;
-
-  left: 50%;
-
-  display: flex;
-
-  justify-content: center;
+  order: 1;
+  flex-shrink: 0;
 
   padding: 0;
-
-  text-align: center;
-
-  transform: translateX(-50%);
-
+  transform: none;
 }
 
 .brand-link {
-
-  display: inline-flex;
-
+  display: flex;
   flex-direction: column;
-
   align-items: center;
-
   white-space: nowrap;
-
 }
 
 .brand-logo {
-
-  width: 85px;
-
-  height: 85px;
-
-  margin-bottom: 0;
-
+  width: 65px;
+  height: 65px;
   object-fit: contain;
-
 }
 
 .brand-name {
-
   color: var(--gold-dark);
-
   font-family: var(--font-serif);
-
-  font-size: 28px;
-
-  font-weight: 600;
-
-  line-height: 1;
-
-  letter-spacing: 0.08em;
-
+  font-size: 19px;
+  letter-spacing: 0.05em;
 }
 
 .brand-subtitle {
-
-  margin-top: 5px;
-
   color: var(--forest);
-
-  font-size: 7px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.28em;
-
+  font-size: 6px;
+  letter-spacing: 0.12em;
 }
 
-/* Navigation bar */
+/* Main navigation */
 
-.navigation-bar {
-
-  position: relative;
-
-  z-index: 4;
-
+.nav-left,
+.nav-right {
   display: flex;
-
   align-items: center;
-
-  justify-content: space-between;
-
-  gap: 24px;
-
-  min-height: 158px;
-
-  padding:
-    0 max(
-      36px,
-      calc((100vw - 1380px) / 2)
-    );
-
-  border: none;
-
-  background: transparent;
-
+  gap: 22px;
 }
 
-.primary-navigation {
+.nav-left {
+  order: 2;
+  margin-left: auto;
+}
 
+.header-right {
+  order: 3;
   display: flex;
-
   align-items: center;
-
-  gap: clamp(
-    17px,
-    2vw,
-    34px
-  );
-
+  gap: 22px;
 }
 
 .nav-link {
-
   position: relative;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  min-height: 55px;
-
   color: var(--forest);
-
   font-family: var(--font-serif);
-
-  font-size: 19px;
-
-  font-weight: 500;
-
-  letter-spacing: 0;
-
-  text-transform: none;
-
-  transition: color var(--transition);
-
-}
-
-.nav-link::after {
-
-  content: "";
-
-  position: absolute;
-
-  right: 0;
-
-  bottom: 8px;
-
-  left: 0;
-
-  height: 1px;
-
-  background: var(--gold);
-
-  transform: scaleX(0);
-
-  transform-origin: center;
-
-  transition: transform var(--transition);
-
+  font-size: 18px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover,
@@ -559,164 +448,212 @@ a:focus-visible,
   color: var(--gold-dark);
 }
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
 .nav-link:hover::after,
 .nav-link.active::after {
   transform: scaleX(1);
 }
 
-/* Leave room for centered logo */
-
-.primary-navigation .nav-link:nth-child(4) {
-  margin-left: clamp(190px, 18vw, 290px);
-}
-
-/* Right actions */
+/* Language and quotation */
 
 .header-actions {
-
   display: flex;
-
   align-items: center;
-
-  gap: 20px;
-
-  flex-shrink: 0;
-
+  gap: 15px;
 }
 
-/* Language selector */
-
 .language-switcher {
-
-  display: inline-flex;
-
+  display: flex;
   align-items: center;
-
-  gap: 7px;
-
+  gap: 6px;
 }
 
 .language-btn {
-
-  padding: 6px 2px;
-
-  border: 0;
-
+  border: none;
   background: transparent;
-
   color: var(--muted);
-
   cursor: pointer;
-
   font-size: 11px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.04em;
-
-  transition: color var(--transition);
-
 }
 
-.language-btn.active,
-.language-btn:hover {
-
+.language-btn.active {
   color: var(--gold-dark);
-
   font-weight: 600;
-
 }
 
 .language-divider {
-
   color: var(--gold-light);
-
-  font-size: 12px;
-
 }
 
-/* Quote button */
-
 .header-quote-btn {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 42px;
-
-  padding: 10px 19px;
-
-  border: 1px solid var(--gold);
-
+  padding: 10px 15px;
   background: var(--gold);
-
-  color: var(--white);
-
+  color: white;
   font-family: var(--font-serif);
-
-  font-size: 17px;
-
-  font-weight: 500;
-
-  letter-spacing: 0;
-
-  text-align: center;
-
-  text-transform: none;
-
-  transition:
-    background var(--transition),
-    border-color var(--transition);
-
+  font-size: 16px;
+  white-space: nowrap;
+  transition: background 0.3s ease;
 }
 
 .header-quote-btn:hover {
-
   background: var(--gold-dark);
-
-  border-color: var(--gold-dark);
-
 }
 
-/* Mobile menu button */
+/* Mobile elements hidden on desktop */
 
-.mobile-menu-toggle {
-
+.mobile-menu-toggle,
+.mobile-navigation {
   display: none;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  gap: 5px;
-
-  width: 42px;
-
-  height: 42px;
-
-  border: 0;
-
-  background: transparent;
-
-  cursor: pointer;
-
 }
 
-.mobile-menu-toggle span {
+/* ==========================================================
+   TABLET AND MOBILE HEADER
+========================================================== */
 
-  width: 25px;
+@media (max-width: 1200px) {
 
-  height: 1px;
+  .navigation-bar {
+    gap: 15px;
+    min-height: 105px;
+    padding: 12px 20px;
+  }
 
-  background: var(--forest);
+  .brand-logo {
+    width: 55px;
+    height: 55px;
+  }
 
-  transition: transform var(--transition);
+  .brand-name {
+    font-size: 16px;
+  }
 
+  .nav-left,
+  .nav-right {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+
+  .header-quote-btn {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 }
 
+/* Mobile menu */
+
+@media (max-width: 950px) {
+
+  .navigation-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+    min-height: 100px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .brand-area {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .header-right {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .mobile-navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 15px 25px;
+    background: var(--ivory);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+
+  .mobile-navigation.is-open {
+    display: flex;
+  }
+
+  .mobile-navigation .nav-link {
+    padding: 12px 0;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 650px) {
+
+  .navigation-bar {
+    padding: 10px 12px;
+  }
+
+  .brand-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 13px;
+  }
+
+  .brand-subtitle {
+    font-size: 5px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .header-quote-btn {
+    padding: 5px 7px;
+    font-size: 10px;
+  }
+
+  .site-header::before {
+    width: 80px;
+    height: 75px;
+    background-size: 160px auto;
+    opacity: 0.3;
+  }
+}
 
 /* ==========================================================
    06 — HERO SECTION

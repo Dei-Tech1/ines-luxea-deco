@@ -811,3 +811,93 @@ img {
   }
 
     }
+
+/* =====================================================
+   INÈS LUXEA DÉCO
+   PREMIUM BRAND LOGO
+===================================================== */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+/* OFFICIAL LOGO */
+
+.brand-logo {
+  display: block;
+  width: 72px;
+  height: 72px;
+
+  object-fit: contain;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+/* SUBTLE HOVER EFFECT */
+
+.brand:hover .brand-logo {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* BRAND NAME */
+
+.brand-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: 800px) {
+
+  .brand-logo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .brand-logo {
+    transition: none;
+  }
+
+}

@@ -3046,10 +3046,53 @@ a:focus-visible,
     font-size: 10px;
   }
 
+  /* ==========================================
+   LARGE LUXURY FLORAL CORNER
+========================================== */
+
+.site-header::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 350px;
+  height: 240px;
+
+  background-image: url("Floral.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 350px auto;
+
+  opacity: 0.9;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep the navigation above the floral artwork */
+
+.navigation-bar {
+  position: relative;
+  z-index: 2;
+}
+
+/* Smaller floral decoration on mobile */
+
+@media (max-width: 950px) {
   .site-header::before {
-    width: 75px;
-    height: 75px;
-    background-size: 160px auto;
-    opacity: 0.3;
+    width: 220px;
+    height: 170px;
+    background-size: 220px auto;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 650px) {
+  .site-header::before {
+    width: 145px;
+    height: 115px;
+    background-size: 145px auto;
   }
 }

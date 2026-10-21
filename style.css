@@ -2846,3 +2846,51 @@ a:focus-visible,
   }
 
 }
+/* ==========================================
+   HEADER — FIX LOGO / NAVIGATION OVERLAP
+========================================== */
+
+@media (min-width: 901px) {
+
+  .site-header {
+    min-height: 160px;
+  }
+
+  .navigation-bar {
+    min-height: 160px;
+  }
+
+  .primary-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: clamp(18px, 2vw, 32px);
+    align-items: center;
+  }
+
+  /* First three links stay on the left */
+  .primary-navigation .nav-link:nth-child(-n+3) {
+    grid-row: 1;
+  }
+
+  /* Keep the remaining links away from the logo */
+  .primary-navigation .nav-link:nth-child(4),
+  .primary-navigation .nav-link:nth-child(5) {
+    margin-left: 0;
+  }
+
+  /* Move the final two links to the right of the logo */
+  .primary-navigation .nav-link:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .primary-navigation .nav-link:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .brand-area {
+    top: 8px;
+  }
+
+}

@@ -1,432 +1,585 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="INÈS LUXEA DÉCO — Décoration événementielle élégante et raffinée.">
+  <meta name="description" content="INÈS LUXEA DÉCO sublime vos mariages, anniversaires, baptêmes et événements avec des décorations élégantes et personnalisées.">
 
-  <title>
-    INÈS LUXEA DÉCO | Décoration Événementielle
-  </title>
+  <meta name="theme-color" content="#f8f5ef">
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+  <title>INÈS LUXEA DÉCO | Décoration événementielle de prestige</title>
 
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- STYLESHEET -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- JAVASCRIPT -->
   <script src="script.js" defer></script>
-
 </head>
 
 <body>
 
-<!-- =====================================
-     HEADER & NAVIGATION
-===================================== -->
+  <!-- ==========================================
+       PREMIUM HEADER
+  ========================================== -->
 
-<header class="site-header">
+  <header class="site-header" id="top">
 
-  <div class="header-inner">
+    <div class="header-inner">
 
-    <!-- =====================================
-     INÈS LUXEA DÉCO — OFFICIAL LOGO
-===================================== -->
+      <nav class="nav-left" aria-label="Navigation principale gauche">
+        <a href="index.html" class="active" aria-current="page">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#prestations">Prestations</a>
+      </nav>
 
-<a href="index.html"
-   class="brand"
-   aria-label="INÈS LUXEA DÉCO — Accueil">
+      <a href="index.html" class="brand" aria-label="INÈS LUXEA DÉCO — Accueil">
+        <img
+          src="IL%20Logo.png"
+          alt="Logo INÈS LUXEA DÉCO"
+          class="brand-logo"
+          width="100"
+          height="100"
+        >
 
-  <img
-    src="IL%20Logo.png"
-    alt="INÈS LUXEA DÉCO"
-    class="brand-logo"
-    width="72"
-    height="72"
-  >
-
-  <span class="brand-name">
-    INÈS LUXEA
-    <small>DÉCO</small>
-  </span>
-
-</a>
-
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="Ouvrir le menu"
-      aria-expanded="false"
-      aria-controls="navigation"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="nav" id="navigation">
-
-      <a href="#univers">
-        Notre Univers
+        <span class="brand-name">INÈS LUXEA DÉCO</span>
+        <span class="brand-subtitle">DÉCORATION ÉVÉNEMENTIELLE</span>
       </a>
 
-      <a href="#prestations">
-        Nos Prestations
-      </a>
+      <nav class="nav-right" aria-label="Navigation principale droite">
+        <a href="realisations.html">Réalisations</a>
+        <a href="#contact">Contact</a>
 
-      <a href="realisations.html">
-        Nos Réalisations
-      </a>
+        <a href="#contact" class="header-quote">
+          Demander un devis <span aria-hidden="true">→</span>
+        </a>
+      </nav>
 
-      <a href="#contact" class="nav-contact">
-        Contact
-        <span>↗</span>
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-<main>
-
-<!-- =====================================
-     HERO — LUXURY INTRODUCTION
-===================================== -->
-
-<section class="hero" id="accueil">
-
-  <div class="hero-art"></div>
-  <div class="hero-shade"></div>
-
-  <div class="hero-content container">
-
-    <p class="eyebrow light">
-      INÈS LUXEA DÉCO · DÉCORATION ÉVÉNEMENTIELLE
-    </p>
-
-    <h1>
-      L'art de sublimer
-      <em>vos instants.</em>
-    </h1>
-
-    <p class="hero-description">
-      Des décors délicats, des atmosphères uniques
-      et une élégance qui se souvient de chaque détail.
-    </p>
-
-    <div class="hero-actions">
-
-      <a href="#prestations"
-         class="button button-light">
-
-        Découvrir nos prestations
-        <span>↗</span>
-
-      </a>
-
-      <a href="realisations.html"
-         class="text-link">
-
-        Voir nos réalisations
-        <span>→</span>
-
-      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
 
-  </div>
+    <nav class="mobile-navigation" id="navigation" aria-label="Navigation mobile">
+      <a href="index.html">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#prestations">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="mobile-quote">Demander un devis →</a>
+    </nav>
 
-  <span class="hero-side">
-    L'ÉLÉGANCE AU CŒUR DE VOS ÉVÉNEMENTS
-  </span>
-
-  <a href="#univers" class="scroll-cue">
-    DÉFILER ↓
-  </a>
-
-</section>
-
-
-<!-- =====================================
-     NOTRE UNIVERS
-===================================== -->
-
-<section class="intro section container"
-         id="univers">
-
-  <div class="intro-decoration">
-    ✳
-  </div>
-
-  <p class="eyebrow">
-    NOTRE UNIVERS
-  </p>
-
-  <h2>
-    Chaque célébration mérite
-    <em>sa touche d'exception.</em>
-  </h2>
-
-  <p>
-    Chez INÈS LUXEA DÉCO, nous imaginons
-    des ambiances où l'esthétique rencontre
-    l'émotion.
-
-    Notre intention : transformer vos envies
-    en souvenirs précieux, avec délicatesse
-    et sens du détail.
-  </p>
-
-  <a href="#contact"
-     class="underlined-link">
-
-    Parlons de votre événement
-    <span>↗</span>
-
-  </a>
-
-</section>
+  </header>
 
 
-<!-- =====================================
-     NOS PRESTATIONS
-===================================== -->
+  <main>
 
-<section class="services section"
-         id="prestations">
+    <!-- ==========================================
+         LUXURY HERO
+    ========================================== -->
 
-  <div class="container">
+    <section class="luxury-hero" aria-labelledby="hero-title">
 
-    <div class="section-heading">
+      <div class="hero-overlay"></div>
 
-      <div>
+      <div class="hero-content">
 
-        <p class="eyebrow">
-          NOS PRESTATIONS
+        <p class="hero-eyebrow">
+          DES ÉVÉNEMENTS QUI RACONTENT VOTRE HISTOIRE
         </p>
 
-        <h2>
-          Des moments pensés
-          <em>pour vous.</em>
-        </h2>
+        <h1 id="hero-title">
+          <span>L'élégance</span>
+          <span>de vos événements,</span>
+          <em>l'exception de chaque détail.</em>
+        </h1>
+
+        <p class="hero-description">
+          Décorations raffinées et personnalisées pour
+          des moments uniques et inoubliables.
+        </p>
+
+        <a href="#prestations" class="hero-button">
+          Découvrir nos prestations
+          <span aria-hidden="true">→</span>
+        </a>
 
       </div>
 
-      <p>
-        Des créations sur mesure pour donner
-        vie à l'atmosphère dont vous rêvez.
-      </p>
+      <div class="hero-pagination" aria-hidden="true">
+        <span class="current">01</span>
+        <span class="divider"></span>
+        <span>02</span>
+        <span>03</span>
+      </div>
 
-    </div>
+    </section>
 
 
-    <div class="service-grid">
+    <!-- ==========================================
+         ABOUT — OUR STORY
+    ========================================== -->
 
-      <!-- SERVICE 1 -->
+    <section class="about-luxury" id="apropos" aria-labelledby="about-title">
 
-      <article class="service-card">
+      <div class="about-inner">
 
-        <span class="service-number">
-          01 /
-        </span>
+        <div class="about-visual">
 
-        <div class="service-icon">
-          ✦
+          <div class="about-image-frame">
+            <img
+              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1100&q=85"
+              alt="Décoration florale élégante pour une réception"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="about-seal" aria-hidden="true">
+            <span>IL</span>
+          </div>
+
         </div>
 
-        <h3>
-          Mariages
-        </h3>
+        <div class="about-content">
 
-        <p>
-          Une mise en scène délicate
-          pour célébrer votre histoire.
-        </p>
+          <p class="section-eyebrow">INÈS LUXEA DÉCO</p>
 
-      </article>
+          <h2 id="about-title">
+            Une décoration
+            <span>sur mesure</span>
+            <em>pour vos plus beaux moments</em>
+          </h2>
 
+          <div class="gold-rule"></div>
 
-      <!-- SERVICE 2 -->
+          <p>
+            Chaque événement raconte une histoire.
+            Notre passion est de lui donner vie à travers
+            une décoration élégante, harmonieuse et
+            pensée dans les moindres détails.
+          </p>
 
-      <article class="service-card">
+          <p>
+            Chez INÈS LUXEA DÉCO, nous imaginons des
+            univers uniques qui reflètent vos envies
+            et subliment les instants les plus précieux.
+          </p>
 
-        <span class="service-number">
-          02 /
-        </span>
+          <a href="#prestations" class="outline-button">
+            En savoir plus
+            <span aria-hidden="true">→</span>
+          </a>
 
-        <div class="service-icon">
-          ❋
         </div>
 
-        <h3>
-          Célébrations privées
-        </h3>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SERVICES — INTERACTIVE FLIP CARDS
+    ========================================== -->
+
+    <section class="luxury-services" id="prestations" aria-labelledby="services-title">
+
+      <div class="section-heading">
+
+        <p class="section-eyebrow">NOS PRESTATIONS</p>
+
+        <h2 id="services-title">
+          Des événements
+          <em>d'exception</em>
+        </h2>
 
         <p>
-          Des ambiances uniques pour
-          vos moments les plus précieux.
+          Des créations pensées pour transformer
+          chaque célébration en un souvenir inoubliable.
         </p>
 
-      </article>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- CARD 1 — MARIAGES -->
+
+        <article class="service-card">
+
+          <div class="service-card-inner">
+
+            <div class="service-card-front">
+
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85"
+                  alt="Décoration de mariage élégante"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="service-icon" aria-hidden="true">♡</div>
+
+              <h3>Mariages et réceptions</h3>
+
+              <button
+                class="flip-trigger"
+                type="button"
+                aria-label="Découvrir les détails de Mariages et réceptions"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+
+            </div>
+
+            <div class="service-card-back">
+
+              <p class="card-back-label">PRESTATION 01</p>
+
+              <h3>Mariages et réceptions</h3>
+
+              <p>
+                Des décors romantiques et raffinés
+                pour célébrer votre union.
+              </p>
+
+              <ul>
+                <li>Décoration de salle</li>
+                <li>Arches et compositions florales</li>
+                <li>Tables d'honneur</li>
+                <li>Centres de table</li>
+                <li>Ambiances personnalisées</li>
+              </ul>
+
+              <a href="#contact" class="card-quote">
+                Demander un devis →
+              </a>
+
+              <button class="flip-back" type="button">
+                ← Retour
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
 
 
-      <!-- SERVICE 3 -->
+        <!-- CARD 2 — ANNIVERSAIRES -->
 
-      <article class="service-card">
+        <article class="service-card">
 
-        <span class="service-number">
-          03 /
-        </span>
+          <div class="service-card-inner">
 
-        <div class="service-icon">
-          ◇
+            <div class="service-card-front">
+
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=85"
+                  alt="Décoration élégante pour anniversaire"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="service-icon" aria-hidden="true">✧</div>
+
+              <h3>Anniversaires élégants</h3>
+
+              <button
+                class="flip-trigger"
+                type="button"
+                aria-label="Découvrir les détails des Anniversaires élégants"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+
+            </div>
+
+            <div class="service-card-back">
+
+              <p class="card-back-label">PRESTATION 02</p>
+
+              <h3>Anniversaires élégants</h3>
+
+              <p>
+                Une mise en scène unique pour
+                célébrer chaque nouvelle année
+                avec élégance.
+              </p>
+
+              <ul>
+                <li>Décorations à thème</li>
+                <li>Compositions de ballons</li>
+                <li>Espaces photos</li>
+                <li>Tables décorées</li>
+                <li>Créations sur mesure</li>
+              </ul>
+
+              <a href="#contact" class="card-quote">
+                Demander un devis →
+              </a>
+
+              <button class="flip-back" type="button">
+                ← Retour
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD 3 — BAPTÊMES -->
+
+        <article class="service-card">
+
+          <div class="service-card-inner">
+
+            <div class="service-card-front">
+
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=85"
+                  alt="Décoration délicate pour fête familiale"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="service-icon" aria-hidden="true">✿</div>
+
+              <h3>Baptêmes et fêtes familiales</h3>
+
+              <button
+                class="flip-trigger"
+                type="button"
+                aria-label="Découvrir les détails des Baptêmes et fêtes familiales"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+
+            </div>
+
+            <div class="service-card-back">
+
+              <p class="card-back-label">PRESTATION 03</p>
+
+              <h3>Baptêmes et fêtes familiales</h3>
+
+              <p>
+                Des ambiances douces et lumineuses
+                pour vos plus belles célébrations
+                en famille.
+              </p>
+
+              <ul>
+                <li>Décorations délicates</li>
+                <li>Tables de réception</li>
+                <li>Compositions florales</li>
+                <li>Univers personnalisés</li>
+                <li>Espaces souvenirs</li>
+              </ul>
+
+              <a href="#contact" class="card-quote">
+                Demander un devis →
+              </a>
+
+              <button class="flip-back" type="button">
+                ← Retour
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD 4 — ÉVÉNEMENTS -->
+
+        <article class="service-card">
+
+          <div class="service-card-inner">
+
+            <div class="service-card-front">
+
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=85"
+                  alt="Décoration pour événement privé ou professionnel"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="service-icon" aria-hidden="true">◇</div>
+
+              <h3>Événements privés et professionnels</h3>
+
+              <button
+                class="flip-trigger"
+                type="button"
+                aria-label="Découvrir les détails des Événements privés et professionnels"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+
+            </div>
+
+            <div class="service-card-back">
+
+              <p class="card-back-label">PRESTATION 04</p>
+
+              <h3>Événements privés et professionnels</h3>
+
+              <p>
+                Des décors sophistiqués pour
+                accueillir vos invités dans
+                une atmosphère mémorable.
+              </p>
+
+              <ul>
+                <li>Soirées privées</li>
+                <li>Événements d'entreprise</li>
+                <li>Réceptions professionnelles</li>
+                <li>Décoration de salle</li>
+                <li>Scénographies sur mesure</li>
+              </ul>
+
+              <a href="#contact" class="card-quote">
+                Demander un devis →
+              </a>
+
+              <button class="flip-back" type="button">
+                ← Retour
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="services-cta">
+        <a href="#contact" class="gold-button">
+          Demander un devis
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         OUR PROMISE
+    ========================================== -->
+
+    <section class="luxury-promises" aria-label="Nos engagements">
+
+      <div class="promises-inner">
+
+        <div class="promise">
+          <span class="promise-icon" aria-hidden="true">◇</span>
+          <p>Un savoir-faire <strong>raffiné</strong></p>
         </div>
 
-        <h3>
-          Événements sur mesure
-        </h3>
+        <div class="promise">
+          <span class="promise-icon" aria-hidden="true">✿</span>
+          <p>Des créations <strong>personnalisées</strong></p>
+        </div>
+
+        <div class="promise">
+          <span class="promise-icon" aria-hidden="true">♡</span>
+          <p>Une écoute attentive <strong>à vos envies</strong></p>
+        </div>
+
+        <div class="promise">
+          <span class="promise-icon" aria-hidden="true">✧</span>
+          <p>Des souvenirs <strong>inoubliables</strong></p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CONTACT
+    ========================================== -->
+
+    <section class="luxury-contact" id="contact" aria-labelledby="contact-title">
+
+      <div class="contact-inner">
+
+        <p class="section-eyebrow">CRÉONS ENSEMBLE</p>
+
+        <h2 id="contact-title">
+          Imaginons votre
+          <em>plus bel événement</em>
+        </h2>
 
         <p>
-          Une décoration imaginée
-          autour de votre vision.
+          Parlez-nous de votre projet et donnons vie,
+          ensemble, à une décoration qui vous ressemble.
         </p>
 
-      </article>
+        <a href="mailto:contact@example.com?subject=Demande%20de%20devis%20IN%C3%88S%20LUXEA%20D%C3%89CO"
+           class="gold-button">
+          Nous contacter →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="luxury-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span>INÈS LUXEA DÉCO</span>
+        <small>DÉCORATION ÉVÉNEMENTIELLE</small>
+      </div>
+
+      <nav aria-label="Navigation de pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#prestations">Prestations</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> INÈS LUXEA DÉCO. Tous droits réservés.</p>
+        <p>Création du site : GODZYA GROUP</p>
+      </div>
 
     </div>
 
-  </div>
-
-</section>
-
-
-<!-- =====================================
-     SIGNATURE
-===================================== -->
-
-<section class="feature section">
-
-  <div class="feature-image"></div>
-
-  <div class="feature-copy">
-
-    <p class="eyebrow">
-      LE SENS DU DÉTAIL
-    </p>
-
-    <h2>
-      Une signature
-      <em>élégante.</em>
-    </h2>
-
-    <p>
-      Textures, lumière, harmonie des couleurs :
-      chaque élément participe à créer
-      une atmosphère singulière.
-    </p>
-
-    <a href="realisations.html"
-       class="button button-dark">
-
-      Explorer nos réalisations
-      <span>↗</span>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================
-     CONTACT
-===================================== -->
-
-<section class="contact section container"
-         id="contact">
-
-  <p class="eyebrow">
-    CRÉONS ENSEMBLE
-  </p>
-
-  <h2>
-    Votre prochain événement
-    commence <em>ici.</em>
-  </h2>
-
-  <p>
-    Racontez-nous votre projet et imaginons
-    ensemble une décoration qui vous ressemble.
-  </p>
-
-  <a
-    href="mailto:contact@example.com?subject=Demande%20de%20devis"
-    class="button button-dark"
-  >
-
-    Demander un devis
-    <span>↗</span>
-
-  </a>
-
-</section>
-
-</main>
-
-
-<!-- =====================================
-     FOOTER
-===================================== -->
-
-<footer class="site-footer">
-
-  <div class="container footer-inner">
-
-    <div>
-
-      <strong>
-        INÈS LUXEA DÉCO
-      </strong>
-
-      <span>
-        © <span id="year">2026</span> INÈS LUXEA DÉCO
-      </span>
-
-    </div>
-
-    <div>
-
-      <a href="#accueil">
-        Retour en haut ↑
-      </a>
-      
-      <span>
-        Site réalisé par GODZYA GROUP
-      </span>
-
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 </body>
-          </html>
+</html>

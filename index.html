@@ -36,11 +36,84 @@
        PREMIUM HEADER
   ========================================= -->
 
-  <header class="site-header" id="top">
+ <header class="site-header" id="top">
 
   <div class="navigation-bar">
 
-    <!-- MOBILE MENU -->
+    <!-- LEFT NAVIGATION -->
+    <nav
+      class="nav-left"
+      aria-label="Navigation principale"
+      data-i18n-aria-label="primaryNavigation"
+    >
+      <a href="index.html" class="nav-link active"
+         aria-current="page" data-i18n="navHome">Accueil</a>
+
+      <a href="apropos.html" class="nav-link"
+         data-i18n="navAbout">À propos</a>
+
+      <a href="prestations.html" class="nav-link"
+         data-i18n="navServices">Prestations</a>
+    </nav>
+
+    <!-- CENTERED LOGO -->
+    <div class="brand-area">
+      <a href="index.html" class="brand-link">
+
+        <img
+          src="IL%20Logo.png"
+          alt="INÈS LUXEA DÉCO"
+          class="brand-logo"
+        >
+
+        <span class="brand-name">INÈS LUXEA DÉCO</span>
+
+        <span class="brand-subtitle" data-i18n="brandSubtitle">
+          DÉCORATION ÉVÉNEMENTIELLE
+        </span>
+
+      </a>
+    </div>
+
+    <!-- RIGHT NAVIGATION AND ACTIONS -->
+    <div class="header-right">
+
+      <nav class="nav-right" aria-label="Navigation secondaire">
+        <a href="realisations.html" class="nav-link"
+           data-i18n="navPortfolio">Réalisations</a>
+
+        <a href="contact.html" class="nav-link"
+           data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <div
+          class="language-switcher"
+          role="group"
+          aria-label="Choix de la langue"
+          data-i18n-aria-label="languageChoice"
+        >
+          <button type="button" class="language-btn active"
+                  data-lang="fr" aria-pressed="true">FR</button>
+
+          <span class="language-divider" aria-hidden="true">|</span>
+
+          <button type="button" class="language-btn"
+                  data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a href="contact.html"
+           class="header-quote-btn"
+           data-i18n="requestQuote">
+          Demander un devis
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- MOBILE MENU BUTTON -->
     <button
       class="mobile-menu-toggle"
       type="button"
@@ -54,54 +127,31 @@
       <span></span>
     </button>
 
-    <!-- LEFT NAVIGATION -->
+    <!-- MOBILE NAVIGATION -->
     <nav
-      class="primary-navigation"
+      class="primary-navigation mobile-navigation"
       id="primary-navigation"
-      aria-label="Navigation principale"
-      data-i18n-aria-label="primaryNavigation"
+      aria-label="Navigation mobile"
     >
-      <a href="index.html" class="nav-link active" aria-current="page" data-i18n="navHome">Accueil</a>
-      <a href="apropos.html" class="nav-link" data-i18n="navAbout">À propos</a>
-      <a href="prestations.html" class="nav-link" data-i18n="navServices">Prestations</a>
-      <a href="realisations.html" class="nav-link" data-i18n="navPortfolio">Réalisations</a>
-      <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+      <a href="index.html" class="nav-link active"
+         aria-current="page" data-i18n="navHome">Accueil</a>
+
+      <a href="apropos.html" class="nav-link"
+         data-i18n="navAbout">À propos</a>
+
+      <a href="prestations.html" class="nav-link"
+         data-i18n="navServices">Prestations</a>
+
+      <a href="realisations.html" class="nav-link"
+         data-i18n="navPortfolio">Réalisations</a>
+
+      <a href="contact.html" class="nav-link"
+         data-i18n="navContact">Contact</a>
     </nav>
-
-    <!-- CENTERED LOGO -->
-    <div class="brand-area">
-      <a href="index.html" class="brand-link">
-        <img
-          src="IL%20Logo.png"
-          alt="INÈS LUXEA DÉCO"
-          class="brand-logo"
-        >
-        <span class="brand-name">INÈS LUXEA DÉCO</span>
-        <span class="brand-subtitle" data-i18n="brandSubtitle">
-          DÉCORATION ÉVÉNEMENTIELLE
-        </span>
-      </a>
-    </div>
-
-    <!-- RIGHT ACTIONS -->
-    <div class="header-actions">
-
-      <div class="language-switcher" role="group" aria-label="Choix de la langue" data-i18n-aria-label="languageChoice">
-        <button type="button" class="language-btn active" data-lang="fr" aria-pressed="true">FR</button>
-        <span class="language-divider" aria-hidden="true">|</span>
-        <button type="button" class="language-btn" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-
-      <a href="contact.html" class="header-quote-btn" data-i18n="requestQuote">
-        Demander un devis
-      </a>
-
-    </div>
 
   </div>
 
 </header>
-
 
   <main>
 

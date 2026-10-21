@@ -194,23 +194,20 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
   height: 78%;
   object-fit: contain;
 }
-/* ABOUT SECTION — CIRCULAR LOGO */
+
+/* CIRCULAR LOGO — NO WHITE SQUARE CORNERS */
 
 .about-monogram {
-  width: 115px;
-  height: 115px;
   border-radius: 50%;
   overflow: hidden;
-  background: #faf8f3;
-  border: 1px solid #b88b49;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: transparent;
 }
 
 .about-monogram-logo {
+  display: block;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
 }

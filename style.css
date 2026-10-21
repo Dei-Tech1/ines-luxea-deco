@@ -1,8 +1,26 @@
 /* ==========================================================
    INÈS LUXEA DÉCO
-   LUXURY BILINGUAL WEBSITE
-   COMPLETE STYLESHEET — VERSION 2
-   ========================================================== */
+   PREMIUM LUXURY EVENT DECORATION WEBSITE
+
+   CLEAN STYLESHEET — VERSION 3.0
+
+   DESIGN:
+   Ivory • Champagne Gold • Botanical Green
+
+   FEATURES:
+   - Large floral decorations
+   - Left-aligned brand
+   - Horizontal desktop navigation
+   - Responsive mobile navigation
+   - French / English switcher
+   - Luxury wedding hero
+   - Arched About photograph
+   - Interactive flipping service cards
+   - Premium footer
+
+   Developed by GODZYA GROUP
+========================================================== */
+
 
 /* ==========================================================
    01 — DESIGN SYSTEM
@@ -48,13 +66,18 @@
 
 
 /* ==========================================================
-   02 — RESET
+   02 — GLOBAL RESET
 ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -62,6 +85,8 @@ html {
 }
 
 body {
+
+  min-width: 320px;
 
   overflow-x: hidden;
 
@@ -102,7 +127,7 @@ button:focus-visible,
 a:focus-visible,
 .service-card:focus-visible {
 
-  outline: 3px solid var(--gold);
+  outline: 2px solid var(--gold);
 
   outline-offset: 4px;
 
@@ -319,341 +344,419 @@ a:focus-visible,
 
   line-height: 1;
 
-  transition: transform var(--transition);
-
-}
-
-.text-link:hover > span:last-child {
-  transform: translateX(5px);
 }
 
 
 /* ==========================================================
    05 — PREMIUM HEADER
-   LEFT LOGO + HORIZONTAL NAVIGATION
+   FLORAL + LOGO LEFT
+   NAVIGATION RIGHT
 ========================================================== */
 
 .site-header {
+
   position: relative;
+
   z-index: 100;
+
   background: var(--ivory);
+
   isolation: isolate;
+
 }
 
-/* Floral decoration in the left corner */
+/* Large floral corner */
 
 .site-header::before {
+
   content: "";
+
   position: absolute;
+
   top: 0;
   left: 0;
+
   z-index: 0;
 
-  width: 145px;
-  height: 120px;
+  width: 350px;
+  height: 235px;
 
-  background: url("Floral.png") no-repeat top left;
-  background-size: 290px auto;
+  background-image: url("Floral.png");
 
-  opacity: 0.45;
+  background-repeat: no-repeat;
+
+  background-position: top left;
+
+  background-size: 350px auto;
+
+  opacity: 0.9;
+
   pointer-events: none;
+
 }
 
-/* Header layout */
+/* Main header layout */
 
 .navigation-bar {
+
   position: relative;
+
   z-index: 1;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
 
-  min-height: 125px;
-  padding: 15px 35px;
+  align-items: center;
+
+  gap: clamp(
+    16px,
+    2vw,
+    30px
+  );
+
+  min-height: 145px;
+
+  padding:
+    18px clamp(
+      24px,
+      3vw,
+      55px
+    );
+
 }
 
-/* Logo on the left */
+/* ==========================================================
+   BRAND
+========================================================== */
 
 .brand-area {
+
   position: relative;
+
   z-index: 2;
 
-  order: 1;
-  flex-shrink: 0;
+  order: 0;
+
+  flex: 0 0 auto;
+
+  margin-left: 155px;
 
   padding: 0;
+
   transform: none;
+
 }
 
 .brand-link {
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   white-space: nowrap;
+
 }
 
 .brand-logo {
-  width: 65px;
-  height: 65px;
+
+  width: 70px;
+
+  height: 70px;
+
+  margin-bottom: 3px;
+
   object-fit: contain;
+
 }
 
 .brand-name {
+
   color: var(--gold-dark);
+
   font-family: var(--font-serif);
-  font-size: 19px;
-  letter-spacing: 0.05em;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.06em;
+
 }
 
 .brand-subtitle {
+
+  margin-top: 6px;
+
   color: var(--forest);
+
   font-size: 6px;
-  letter-spacing: 0.12em;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
 }
 
-/* Main navigation */
+
+/* ==========================================================
+   DESKTOP NAVIGATION
+========================================================== */
 
 .nav-left,
 .nav-right {
+
   display: flex;
+
   align-items: center;
-  gap: 22px;
+
+  gap: clamp(
+    12px,
+    1.5vw,
+    25px
+  );
+
 }
 
 .nav-left {
-  order: 2;
+
+  order: 1;
+
+  flex: 0 0 auto;
+
   margin-left: auto;
+
 }
 
 .header-right {
-  order: 3;
+
+  order: 2;
+
   display: flex;
+
   align-items: center;
-  gap: 22px;
+
+  gap: clamp(
+    12px,
+    1.5vw,
+    24px
+  );
+
+  min-width: 0;
+
 }
 
 .nav-link {
+
   position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 40px;
+
   color: var(--forest);
+
   font-family: var(--font-serif);
+
   font-size: 18px;
+
+  font-weight: 500;
+
   white-space: nowrap;
-  transition: color 0.3s ease;
+
+  transition: color var(--transition);
+
+}
+
+.nav-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 4px;
+  left: 0;
+
+  height: 1px;
+
+  background: var(--gold);
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform var(--transition);
+
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--gold-dark);
-}
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: var(--gold);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  color: var(--gold-dark);
+
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
+
   transform: scaleX(1);
+
 }
 
-/* Language and quotation */
+
+/* ==========================================================
+   HEADER ACTIONS
+========================================================== */
 
 .header-actions {
+
   display: flex;
+
   align-items: center;
+
   gap: 15px;
+
+  flex: 0 0 auto;
+
 }
 
 .language-switcher {
-  display: flex;
+
+  display: inline-flex;
+
   align-items: center;
-  gap: 6px;
+
+  gap: 7px;
+
 }
 
 .language-btn {
+
+  padding: 6px 2px;
+
   border: none;
+
   background: transparent;
+
   color: var(--muted);
+
   cursor: pointer;
+
   font-size: 11px;
+
+  font-weight: 500;
+
+  transition: color var(--transition);
+
 }
 
-.language-btn.active {
+.language-btn.active,
+.language-btn:hover {
+
   color: var(--gold-dark);
+
   font-weight: 600;
+
 }
 
 .language-divider {
+
   color: var(--gold-light);
+
 }
 
 .header-quote-btn {
-  padding: 10px 15px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 10px 16px;
+
+  border: 1px solid var(--gold);
+
   background: var(--gold);
-  color: white;
+
+  color: var(--white);
+
   font-family: var(--font-serif);
+
   font-size: 16px;
+
   white-space: nowrap;
-  transition: background 0.3s ease;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+
 }
 
 .header-quote-btn:hover {
+
   background: var(--gold-dark);
+
+  border-color: var(--gold-dark);
+
 }
 
-/* Mobile elements hidden on desktop */
 
-.mobile-menu-toggle,
+/* ==========================================================
+   MOBILE MENU — DEFAULT HIDDEN
+========================================================== */
+
+.mobile-menu-toggle {
+
+  display: none;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  width: 42px;
+
+  height: 42px;
+
+  padding: 8px;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+}
+
+.mobile-menu-toggle span {
+
+  display: block;
+
+  width: 25px;
+
+  height: 1px;
+
+  background: var(--forest);
+
+  transition: transform var(--transition);
+
+}
+
 .mobile-navigation {
   display: none;
 }
 
-/* ==========================================================
-   TABLET AND MOBILE HEADER
-========================================================== */
-
-@media (max-width: 1200px) {
-
-  .navigation-bar {
-    gap: 15px;
-    min-height: 105px;
-    padding: 12px 20px;
-  }
-
-  .brand-logo {
-    width: 55px;
-    height: 55px;
-  }
-
-  .brand-name {
-    font-size: 16px;
-  }
-
-  .nav-left,
-  .nav-right {
-    gap: 12px;
-  }
-
-  .nav-link {
-    font-size: 16px;
-  }
-
-  .header-right {
-    gap: 12px;
-  }
-
-  .header-quote-btn {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-}
-
-/* Mobile menu */
-
-@media (max-width: 950px) {
-
-  .navigation-bar {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 12px;
-    min-height: 100px;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .brand-area {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: start;
-  }
-
-  .nav-left,
-  .nav-right {
-    display: none;
-  }
-
-  .header-right {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .mobile-navigation {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 20;
-
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-
-    padding: 15px 25px;
-    background: var(--ivory);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  }
-
-  .mobile-navigation.is-open {
-    display: flex;
-  }
-
-  .mobile-navigation .nav-link {
-    padding: 12px 0;
-  }
-}
-
-/* Small phones */
-
-@media (max-width: 650px) {
-
-  .navigation-bar {
-    padding: 10px 12px;
-  }
-
-  .brand-logo {
-    width: 45px;
-    height: 45px;
-  }
-
-  .brand-name {
-    font-size: 13px;
-  }
-
-  .brand-subtitle {
-    font-size: 5px;
-  }
-
-  .header-actions {
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .header-quote-btn {
-    padding: 5px 7px;
-    font-size: 10px;
-  }
-
-  .site-header::before {
-    width: 80px;
-    height: 75px;
-    background-size: 160px auto;
-    opacity: 0.3;
-  }
-}
 
 /* ==========================================================
    06 — HERO SECTION
@@ -725,7 +828,7 @@ a:focus-visible,
 
 }
 
-/* Left-aligned hero content */
+/* Left-aligned content */
 
 .hero-content {
 
@@ -777,7 +880,7 @@ a:focus-visible,
 
 }
 
-/* Main heading */
+/* Hero title */
 
 .hero-title {
 
@@ -835,8 +938,6 @@ a:focus-visible,
 
 }
 
-/* Third heading line */
-
 .hero-title > span:last-child {
 
   max-width: 700px;
@@ -846,8 +947,6 @@ a:focus-visible,
   line-height: 1.1;
 
 }
-
-/* Hero description */
 
 .hero-description {
 
@@ -899,7 +998,7 @@ a:focus-visible,
 
 }
 
-/* Slide indicators */
+/* Hero pagination */
 
 .hero-pagination {
 
@@ -909,8 +1008,6 @@ a:focus-visible,
 
   bottom: 65px;
 
-  left: auto;
-
   display: flex;
 
   flex-direction: column;
@@ -918,8 +1015,6 @@ a:focus-visible,
   align-items: center;
 
   gap: 13px;
-
-  transform: none;
 
 }
 
@@ -996,19 +1091,13 @@ a:focus-visible,
 
   0%,
   100% {
-
     transform: translateY(-5px);
-
     opacity: 0.45;
-
   }
 
   50% {
-
     transform: translateY(5px);
-
     opacity: 1;
-
   }
 
 }
@@ -1028,8 +1117,9 @@ a:focus-visible,
 
 }
 
-/* Floral decoration on right */
+/* Floral artwork */
 
+.about-preview::before,
 .about-preview::after {
 
   content: "";
@@ -1038,43 +1128,7 @@ a:focus-visible,
 
   z-index: 0;
 
-  right: -15px;
-
-  bottom: -50px;
-
-  width: 290px;
-
-  height: 360px;
-
-  background-image: url("Floral.png");
-
-  background-repeat: no-repeat;
-
-  background-size: 580px 390px;
-
-  background-position: bottom right;
-
-  opacity: 0.85;
-
-  pointer-events: none;
-
-}
-
-/* Floral decoration on left */
-
-.about-preview::before {
-
-  content: "";
-
-  position: absolute;
-
-  z-index: 0;
-
-  left: -35px;
-
-  bottom: -45px;
-
-  width: 260px;
+  width: 280px;
 
   height: 340px;
 
@@ -1082,13 +1136,31 @@ a:focus-visible,
 
   background-repeat: no-repeat;
 
-  background-size: 540px 360px;
+  background-size: 550px auto;
+
+  opacity: 0.65;
+
+  pointer-events: none;
+
+}
+
+.about-preview::before {
+
+  left: -45px;
+
+  bottom: -60px;
 
   background-position: bottom left;
 
-  opacity: 0.7;
+}
 
-  pointer-events: none;
+.about-preview::after {
+
+  right: -30px;
+
+  bottom: -50px;
+
+  background-position: bottom right;
 
 }
 
@@ -1152,7 +1224,7 @@ a:focus-visible,
 
 }
 
-/* Monogram badge */
+/* Decorative monogram */
 
 .about-monogram {
 
@@ -1256,44 +1328,13 @@ a:focus-visible,
 
 }
 
-.services-section::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: -60px;
-
-  left: -35px;
-
-  width: 250px;
-
-  height: 300px;
-
-  background-image: url("Floral.png");
-
-  background-repeat: no-repeat;
-
-  background-size: 500px 335px;
-
-  background-position: top left;
-
-  opacity: 0.55;
-
-  pointer-events: none;
-
-}
-
+.services-section::before,
 .services-section::after {
 
   content: "";
 
   position: absolute;
 
-  right: -35px;
-
-  bottom: -65px;
-
   width: 250px;
 
   height: 300px;
@@ -1302,13 +1343,31 @@ a:focus-visible,
 
   background-repeat: no-repeat;
 
-  background-size: 500px 335px;
+  background-size: 500px auto;
 
-  background-position: bottom right;
-
-  opacity: 0.55;
+  opacity: 0.5;
 
   pointer-events: none;
+
+}
+
+.services-section::before {
+
+  top: -60px;
+
+  left: -35px;
+
+  background-position: top left;
+
+}
+
+.services-section::after {
+
+  right: -35px;
+
+  bottom: -65px;
+
+  background-position: bottom right;
 
 }
 
@@ -1335,7 +1394,10 @@ a:focus-visible,
 
 }
 
-/* Flipping cards */
+
+/* ==========================================================
+   FLIPPING SERVICE CARDS
+========================================================== */
 
 .service-card {
 
@@ -1372,11 +1434,8 @@ a:focus-visible,
 
 }
 
-.service-card.is-flipped
-.service-card-inner {
-
+.service-card.is-flipped .service-card-inner {
   transform: rotateY(180deg);
-
 }
 
 .service-card-front,
@@ -1429,11 +1488,8 @@ a:focus-visible,
 
 }
 
-.service-card:hover
-.service-card-front > img {
-
+.service-card:hover .service-card-front > img {
   transform: scale(1.06);
-
 }
 
 .service-card-content {
@@ -1679,44 +1735,13 @@ a:focus-visible,
 
 }
 
-.quote-section::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: -100px;
-
-  left: -70px;
-
-  width: 310px;
-
-  height: 340px;
-
-  background-image: url("Floral.png");
-
-  background-repeat: no-repeat;
-
-  background-size: 620px 415px;
-
-  background-position: top left;
-
-  opacity: 0.55;
-
-  pointer-events: none;
-
-}
-
+.quote-section::before,
 .quote-section::after {
 
   content: "";
 
   position: absolute;
 
-  right: -70px;
-
-  bottom: -110px;
-
   width: 310px;
 
   height: 340px;
@@ -1725,13 +1750,31 @@ a:focus-visible,
 
   background-repeat: no-repeat;
 
-  background-size: 620px 415px;
+  background-size: 620px auto;
 
-  background-position: bottom right;
-
-  opacity: 0.55;
+  opacity: 0.5;
 
   pointer-events: none;
+
+}
+
+.quote-section::before {
+
+  top: -100px;
+
+  left: -70px;
+
+  background-position: top left;
+
+}
+
+.quote-section::after {
+
+  right: -70px;
+
+  bottom: -110px;
+
+  background-position: bottom right;
 
 }
 
@@ -1992,186 +2035,145 @@ a:focus-visible,
 
 
 /* ==========================================================
-   12 — DESKTOP HEADER ADJUSTMENTS
+   12 — LARGE LAPTOPS
 ========================================================== */
 
-@media (max-width: 1400px) {
+@media (max-width: 1550px) {
+
+  .brand-area {
+    margin-left: 120px;
+  }
 
   .navigation-bar {
-
+    gap: 18px;
     padding-inline: 25px;
-
   }
 
-  .primary-navigation {
-
-    gap: 19px;
-
-  }
-
-  .primary-navigation
-  .nav-link:nth-child(4) {
-
-    margin-left: clamp(
-      160px,
-      16vw,
-      230px
-    );
-
-  }
-
-  .header-actions {
-    gap: 13px;
+  .nav-left,
+  .nav-right {
+    gap: 15px;
   }
 
   .nav-link {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+  .header-right {
+    gap: 15px;
+  }
+
+  .header-actions {
+    gap: 10px;
   }
 
   .header-quote-btn {
-    font-size: 15px;
+    padding-inline: 12px;
+    font-size: 14px;
   }
 
 }
 
 
 /* ==========================================================
-   13 — TABLET
+   13 — COMPACT DESKTOP
+========================================================== */
+
+@media (max-width: 1300px) {
+
+  .brand-area {
+    margin-left: 75px;
+  }
+
+  .brand-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .site-header::before {
+    width: 240px;
+    height: 190px;
+    background-size: 240px auto;
+  }
+
+  .navigation-bar {
+    gap: 13px;
+    padding-inline: 18px;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .header-quote-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* ==========================================================
+   14 — TABLET AND MOBILE NAVIGATION
 ========================================================== */
 
 @media (max-width: 1100px) {
 
   .site-header {
-    min-height: 140px;
-  }
-
-  .brand-area {
-    top: 5px;
-  }
-
-  .brand-logo {
-
-    width: 73px;
-
-    height: 73px;
-
-  }
-
-  .brand-name {
-    font-size: 24px;
+    min-height: 120px;
   }
 
   .navigation-bar {
-    min-height: 140px;
-  }
 
-  .primary-navigation {
-    gap: 13px;
-  }
+    display: grid;
 
-  .primary-navigation
-  .nav-link:nth-child(4) {
+    grid-template-columns:
+      45px minmax(0, 1fr) auto;
 
-    margin-left: 150px;
+    align-items: center;
 
-  }
+    gap: 12px;
 
-  .nav-link {
-    font-size: 15px;
-  }
+    min-height: 120px;
 
-  .header-quote-btn {
-
-    padding-inline: 12px;
-
-    font-size: 13px;
-
-  }
-
-  .hero-section {
-
-    min-height: 570px;
-
-    padding-inline: 55px;
-
-  }
-
-  .hero-title {
-    font-size: 68px;
-  }
-
-  .about-grid {
-    gap: 60px;
-  }
-
-  .about-image-frame {
-    height: 510px;
-  }
-
-  .services-grid {
-    gap: 15px;
-  }
-
-  .service-card {
-    height: 355px;
-  }
-
-  .service-card-content h3 {
-    font-size: 22px;
-  }
-
-}
-
-
-/* ==========================================================
-   14 — MOBILE NAVIGATION
-========================================================== */
-
-@media (max-width: 900px) {
-
-  .site-header {
-
-    min-height: 140px;
-
-  }
-
-  .site-header::before {
-
-    width: 175px;
-
-    height: 145px;
-
-    background-size: 350px 235px;
+    padding: 12px 22px;
 
   }
 
   .brand-area {
 
-    top: 9px;
+    grid-column: 2;
+    grid-row: 1;
+
+    justify-self: start;
+
+    margin-left: 0;
 
   }
 
-  .brand-logo {
-
-    width: 68px;
-
-    height: 68px;
-
+  .nav-left,
+  .nav-right {
+    display: none;
   }
 
-  .brand-name {
-    font-size: 23px;
-  }
+  .header-right {
 
-  .brand-subtitle {
-    font-size: 6px;
-  }
+    grid-column: 3;
+    grid-row: 1;
 
-  .navigation-bar {
+    display: flex;
 
-    min-height: 140px;
+    justify-content: flex-end;
 
-    padding-inline: 24px;
+    margin: 0;
 
   }
 
@@ -2179,19 +2181,22 @@ a:focus-visible,
 
     display: flex;
 
-    z-index: 10;
+    grid-column: 1;
+    grid-row: 1;
+
+    z-index: 3;
 
   }
 
-  .primary-navigation {
+  .mobile-navigation {
 
     position: absolute;
 
     top: 100%;
-
     right: 0;
-
     left: 0;
+
+    z-index: 20;
 
     display: none;
 
@@ -2201,90 +2206,80 @@ a:focus-visible,
 
     gap: 0;
 
-    padding: 15px 24px 25px;
-
-    border-bottom:
-      1px solid var(--border);
+    padding: 15px 25px 25px;
 
     background: var(--ivory);
 
+    border-bottom: 1px solid var(--border);
+
     box-shadow:
       0 20px 35px
-      rgba(30, 30, 25, 0.08);
+      rgba(0, 0, 0, 0.08);
 
   }
 
-  .primary-navigation.is-open {
+  .mobile-navigation.is-open {
     display: flex;
   }
 
-  .primary-navigation
-  .nav-link:nth-child(4) {
+  .mobile-navigation .nav-link {
 
-    margin-left: 0;
+    display: flex;
 
-  }
+    min-height: 50px;
 
-  .nav-link {
+    margin: 0;
 
-    min-height: 49px;
+    padding: 10px 0;
 
-    border-bottom:
-      1px solid
-      rgba(184, 139, 73, 0.12);
+    border-bottom: 1px solid var(--border);
 
     font-size: 19px;
 
   }
 
-  .nav-link::after {
-    bottom: 0;
+  .site-header::before {
+
+    width: 175px;
+
+    height: 140px;
+
+    background-size: 175px auto;
+
+    opacity: 0.55;
+
   }
 
-  .header-actions {
-    margin-left: auto;
-  }
+  /* Hero */
 
   .hero-section {
-
-    min-height: 610px;
-
-    padding: 100px 45px;
-
+    min-height: 590px;
+    padding-inline: 45px;
   }
 
   .hero-title {
-    font-size: 65px;
+    font-size: 67px;
   }
 
+  /* About */
+
   .about-grid {
-
-    grid-template-columns:
-      1fr 1fr;
-
-    gap: 35px;
-
+    gap: 50px;
   }
 
   .about-image-frame {
-    height: 450px;
+    height: 500px;
   }
 
+  /* Services */
+
   .services-grid {
-
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
-
   }
 
   .service-card {
     height: 420px;
-  }
-
-  .footer-main {
-    gap: 35px;
   }
 
 }
@@ -2309,82 +2304,42 @@ a:focus-visible,
     padding: 75px 0;
   }
 
+  /* Header */
+
   .site-header {
-
-    min-height: 125px;
-
-  }
-
-  .site-header::before {
-
-    width: 115px;
-
-    height: 115px;
-
-    background-size: 240px 160px;
-
-  }
-
-  .brand-area {
-    top: 8px;
-  }
-
-  .brand-logo {
-
-    width: 59px;
-
-    height: 59px;
-
-  }
-
-  .brand-name {
-
-    font-size: 20px;
-
-    letter-spacing: 0.04em;
-
-  }
-
-  .brand-subtitle {
-
-    margin-top: 4px;
-
-    font-size: 6px;
-
-    letter-spacing: 0.12em;
-
+    min-height: 105px;
   }
 
   .navigation-bar {
 
-    min-height: 125px;
+    grid-template-columns:
+      35px minmax(0, 1fr) auto;
 
-    padding-inline: 16px;
+    gap: 7px;
+
+    min-height: 105px;
+
+    padding: 10px 12px;
 
   }
 
-  .mobile-menu-toggle {
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
 
-    width: 35px;
+  .brand-name {
+    font-size: clamp(12px, 3.2vw, 17px);
+  }
 
-    height: 35px;
-
+  .brand-subtitle {
+    font-size: 5px;
+    letter-spacing: 0.08em;
   }
 
   .header-actions {
-
-    gap: 9px;
-
-  }
-
-  .header-quote-btn {
-
-    min-height: 33px;
-
-    padding: 7px 9px;
-
-    font-size: 11px;
-
+    flex-direction: column;
+    gap: 3px;
   }
 
   .language-switcher {
@@ -2395,22 +2350,37 @@ a:focus-visible,
     font-size: 10px;
   }
 
-  /* Mobile hero */
+  .header-quote-btn {
+    min-height: 28px;
+    padding: 5px 7px;
+    font-size: 10px;
+  }
+
+  .site-header::before {
+
+    width: 105px;
+
+    height: 105px;
+
+    background-size: 105px auto;
+
+    opacity: 0.4;
+
+  }
+
+  /* Hero */
 
   .hero-section {
 
     min-height: 620px;
 
     padding:
-      90px 25px 100px;
+      85px 25px 95px;
 
   }
 
   .hero-background {
-
-    background-position:
-      60% center;
-
+    background-position: 60% center;
   }
 
   .hero-overlay {
@@ -2425,21 +2395,17 @@ a:focus-visible,
   }
 
   .hero-eyebrow {
-
     max-width: 300px;
-
     font-size: 8px;
-
     letter-spacing: 0.23em;
-
   }
 
   .hero-title {
 
     font-size: clamp(
-      43px,
-      11vw,
-      65px
+      40px,
+      10.5vw,
+      63px
     );
 
     line-height: 1;
@@ -2487,29 +2453,20 @@ a:focus-visible,
   }
 
   .hero-pagination {
-
     right: 18px;
-
     bottom: 68px;
-
   }
 
   .hero-scroll {
-
     right: 18px;
-
     bottom: 18px;
-
   }
 
   /* About */
 
   .about-grid {
-
     grid-template-columns: 1fr;
-
     gap: 55px;
-
   }
 
   .about-visual {
@@ -2531,17 +2488,12 @@ a:focus-visible,
     right: -5px;
 
     width: 100px;
-
     height: 100px;
 
   }
 
   .about-monogram span {
     font-size: 38px;
-  }
-
-  .about-content {
-    max-width: 100%;
   }
 
   .section-title {
@@ -2558,11 +2510,9 @@ a:focus-visible,
   .about-preview::after {
 
     width: 150px;
-
     height: 200px;
 
-    background-size:
-      320px 215px;
+    background-size: 300px auto;
 
     opacity: 0.35;
 
@@ -2570,20 +2520,13 @@ a:focus-visible,
 
   /* Services */
 
-  .services-section
-  .section-heading {
-
+  .services-section .section-heading {
     margin-bottom: 35px;
-
   }
 
   .services-grid {
-
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-
   }
 
   .service-card {
@@ -2591,41 +2534,26 @@ a:focus-visible,
   }
 
   .service-card-content {
-
     right: 8px;
-
     bottom: 16px;
-
     left: 8px;
-
   }
 
   .service-icon {
-
     width: 36px;
-
     height: 36px;
-
     margin-bottom: 10px;
-
     font-size: 23px;
-
   }
 
   .service-card-content h3 {
-
     min-height: 55px;
-
     font-size: 19px;
-
   }
 
   .service-arrow {
-
     margin-top: 6px;
-
     font-size: 20px;
-
   }
 
   .service-card-back {
@@ -2633,37 +2561,24 @@ a:focus-visible,
   }
 
   .service-card-back h3 {
-
     margin-bottom: 10px;
-
     font-size: 21px;
-
   }
 
   .service-card-back p {
-
     margin-bottom: 13px;
-
     font-size: 9px;
-
     line-height: 1.6;
-
   }
 
   .service-back-icon {
-
     margin-bottom: 8px;
-
     font-size: 27px;
-
   }
 
   .service-quote-link {
-
     padding: 8px;
-
     font-size: 8px;
-
   }
 
   /* Quote */
@@ -2676,11 +2591,9 @@ a:focus-visible,
   .quote-section::after {
 
     width: 150px;
-
     height: 180px;
 
-    background-size:
-      320px 215px;
+    background-size: 300px auto;
 
     opacity: 0.3;
 
@@ -2689,12 +2602,8 @@ a:focus-visible,
   /* Values */
 
   .values-grid {
-
-    grid-template-columns:
-      repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
     gap: 35px 15px;
-
   }
 
   /* Footer */
@@ -2706,7 +2615,6 @@ a:focus-visible,
     gap: 40px;
 
     padding-top: 55px;
-
     padding-bottom: 50px;
 
   }
@@ -2725,25 +2633,27 @@ a:focus-visible,
 
 
 /* ==========================================================
-   16 — EXTRA SMALL SCREENS
+   16 — SMALL PHONES
 ========================================================== */
 
 @media (max-width: 380px) {
 
   .brand-name {
-    font-size: 18px;
+    font-size: 12px;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
   }
 
   .header-quote-btn {
-
-    padding-inline: 7px;
-
-    font-size: 10px;
-
+    padding-inline: 5px;
+    font-size: 9px;
   }
 
   .hero-title {
-    font-size: 40px;
+    font-size: 39px;
   }
 
   .service-card {
@@ -2771,328 +2681,12 @@ a:focus-visible,
   *::before,
   *::after {
 
-    animation-duration:
-      0.01ms !important;
+    animation-duration: 0.01ms !important;
 
-    animation-iteration-count:
-      1 !important;
+    animation-iteration-count: 1 !important;
 
-    transition-duration:
-      0.01ms !important;
+    transition-duration: 0.01ms !important;
 
   }
 
-}
-
-/* =====================================================
-   INÈS LUXEA DÉCO
-   CLEAN PREMIUM HEADER — FINAL STRUCTURE
-===================================================== */
-
-.site-header {
-  position: relative;
-  min-height: 150px;
-  background: var(--ivory);
-  isolation: isolate;
-}
-
-/* Floral decoration */
-
-.site-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-
-  width: 175px;
-  height: 135px;
-
-  background: url("Floral.png") no-repeat top left;
-  background-size: 350px auto;
-
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/* Main layout */
-
-.navigation-bar {
-  position: relative;
-  z-index: 1;
-
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: center;
-  gap: 28px;
-
-  min-height: 150px;
-  padding: 15px 35px;
-
-  border: 0;
-  background: transparent;
-}
-
-/* Left navigation */
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 12px 25px;
-  min-width: 0;
-}
-
-/* Centered logo */
-
-.brand-area {
-  position: static;
-  grid-column: 2;
-  grid-row: 1;
-
-  display: flex;
-  justify-content: center;
-
-  padding: 0;
-  transform: none;
-  z-index: 2;
-}
-
-.brand-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.brand-logo {
-  width: 74px;
-  height: 74px;
-  margin: 0;
-  object-fit: contain;
-}
-
-.brand-name {
-  font-family: var(--font-serif);
-  font-size: 23px;
-  letter-spacing: 0.06em;
-  line-height: 1.1;
-}
-
-.brand-subtitle {
-  margin-top: 5px;
-  font-size: 7px;
-  letter-spacing: 0.18em;
-}
-
-/* Right navigation */
-
-.header-right {
-  grid-column: 3;
-  grid-row: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 12px 22px;
-
-  min-width: 0;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.nav-left .nav-link,
-.nav-right .nav-link {
-  min-height: 35px;
-  font-size: 17px;
-}
-
-/* Language and quotation */
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 0;
-}
-
-/* Hide mobile navigation on desktop */
-
-.mobile-menu-toggle,
-.mobile-navigation {
-  display: none;
-}
-
-/* =====================================================
-   TABLET AND MOBILE
-===================================================== */
-
-@media (max-width: 1200px) {
-
-  .navigation-bar {
-    grid-template-columns: 42px minmax(0, 1fr) auto;
-    gap: 12px;
-    min-height: 125px;
-    padding: 12px 20px;
-  }
-
-  .site-header {
-    min-height: 125px;
-  }
-
-  .nav-left,
-  .nav-right {
-    display: none;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-    grid-column: 1;
-    grid-row: 1;
-    z-index: 3;
-  }
-
-  .brand-area {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .header-right {
-    grid-column: 3;
-    grid-row: 1;
-    justify-content: flex-end;
-  }
-
-  .header-actions {
-    gap: 10px;
-  }
-
-  .mobile-navigation {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    z-index: 20;
-
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-
-    padding: 15px 25px 25px;
-    background: var(--ivory);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 20px 35px rgba(0,0,0,0.08);
-  }
-
-  .mobile-navigation.is-open {
-    display: flex;
-  }
-
-  .mobile-navigation .nav-link {
-    min-height: 50px;
-    margin: 0;
-    font-size: 18px;
-  }
-
-  .mobile-navigation .nav-link:nth-child(4) {
-    margin-left: 0;
-  }
-
-  .site-header::before {
-    width: 110px;
-    height: 105px;
-    background-size: 230px auto;
-    opacity: 0.35;
-  }
-}
-
-@media (max-width: 650px) {
-
-  .navigation-bar {
-    grid-template-columns: 35px minmax(0, 1fr) auto;
-    gap: 7px;
-    padding: 10px 12px;
-  }
-
-  .brand-logo {
-    width: 55px;
-    height: 55px;
-  }
-
-  .brand-name {
-    font-size: clamp(13px, 3.2vw, 19px);
-  }
-
-  .brand-subtitle {
-    font-size: 6px;
-    letter-spacing: 0.08em;
-  }
-
-  .header-actions {
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .header-quote-btn {
-    min-height: 29px;
-    padding: 5px 7px;
-    font-size: 10px;
-  }
-}
-  /* ==========================================
-   LARGE LUXURY FLORAL CORNER
-========================================== */
-
-.site-header::before {
-  content: "";
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 350px;
-  height: 240px;
-
-  background-image: url("Floral.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 350px auto;
-
-  opacity: 0.9;
-
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* Keep the navigation above the floral artwork */
-
-.navigation-bar {
-  position: relative;
-  z-index: 2;
-}
-
-/* Smaller floral decoration on mobile */
-
-@media (max-width: 950px) {
-  .site-header::before {
-    width: 220px;
-    height: 170px;
-    background-size: 220px auto;
-    opacity: 0.7;
-  }
-}
-
-@media (max-width: 650px) {
-  .site-header::before {
-    width: 145px;
-    height: 115px;
-    background-size: 145px auto;
-  }
 }

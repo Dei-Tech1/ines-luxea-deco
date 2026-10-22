@@ -1,1 +1,1041 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Découvrez l'histoire, la passion et la vision d'INÈS LUXEA DÉCO.">
+
+  <meta name="theme-color" content="#f9f6ef">
+
+  <title>À propos | INÈS LUXEA DÉCO</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- WEBSITE ASSETS -->
+  <link rel="icon" type="image/png" href="IL%20Logo.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
+  <!-- ABOUT PAGE STYLING -->
+  <style>
+
+    /* ==========================================
+       INÈS LUXEA DÉCO
+       ABOUT PAGE — PREMIUM EDITORIAL DESIGN
+    ========================================== */
+
+    .about-page {
+      background: var(--ivory);
+      overflow: hidden;
+    }
+
+    /* PAGE INTRODUCTION */
+
+    .about-page-hero {
+      position: relative;
+      padding: 110px 24px 95px;
+      text-align: center;
+      background:
+        radial-gradient(
+          ellipse at 50% 0%,
+          rgba(223,196,151,.16),
+          transparent 65%
+        ),
+        var(--ivory);
+    }
+
+    .about-page-hero .section-eyebrow {
+      margin-bottom: 22px;
+    }
+
+    .about-page-hero h1 {
+      color: var(--forest);
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: clamp(58px, 8vw, 112px);
+      line-height: .95;
+      letter-spacing: -.04em;
+    }
+
+    .about-page-hero h1 em {
+      display: block;
+      margin-top: 12px;
+      color: var(--gold);
+      font-family: var(--font-script);
+      font-size: .78em;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0;
+    }
+
+    .about-page-hero-description {
+      max-width: 590px;
+      margin: 32px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    /* ==========================================
+       SECTION 1 — OUR STORY
+    ========================================== */
+
+    .story-section {
+      padding: 110px 0 125px;
+      background: #f5f0e7;
+    }
+
+    .story-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .story-inner .section-title {
+      margin-bottom: 35px;
+    }
+
+    .story-divider {
+      width: 75px;
+      height: 1px;
+      margin: 0 auto 40px;
+      background: var(--gold);
+    }
+
+    .story-text {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .story-text p {
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2.2;
+    }
+
+    .story-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==========================================
+       SECTION 2 — OUR FOUNDER
+    ========================================== */
+
+    .founder-section {
+      padding: 130px 0;
+      background: var(--ivory);
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(45px, 7vw, 110px);
+      align-items: center;
+    }
+
+    .founder-image-wrap {
+      position: relative;
+      padding: 20px;
+    }
+
+    .founder-image-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0 40px 40px 0;
+      border: 1px solid rgba(184,139,73,.35);
+      pointer-events: none;
+    }
+
+    .founder-image {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 30px 70px rgba(38,60,48,.08);
+    }
+
+    .founder-content .section-eyebrow {
+      margin-bottom: 18px;
+    }
+
+    .founder-name {
+      margin: 0 0 22px;
+      color: var(--forest);
+      font-family: var(--font-serif);
+      font-size: clamp(43px, 5vw, 73px);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -.035em;
+    }
+
+    .founder-role {
+      margin-bottom: 30px;
+      color: var(--gold-dark);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .founder-content .gold-divider {
+      margin: 0 0 30px;
+    }
+
+    .founder-content p:not(.section-eyebrow):not(.founder-role) {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2.1;
+    }
+
+    .founder-signature {
+      margin-top: 25px;
+      color: var(--gold);
+      font-family: var(--font-script);
+      font-size: 65px;
+      line-height: 1.2;
+    }
+
+    /* ==========================================
+       SECTION 3 — OUR PHILOSOPHY
+    ========================================== */
+
+    .philosophy-section {
+      padding: 115px 0 125px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(246,240,231,.91),
+          rgba(246,240,231,.91)
+        ),
+        url("floral-background.png")
+        center / cover no-repeat;
+    }
+
+    .philosophy-inner {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .philosophy-inner .section-title {
+      margin-bottom: 30px;
+    }
+
+    .philosophy-description {
+      max-width: 680px;
+      margin: 0 auto 35px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2.2;
+    }
+
+    .philosophy-quote {
+      margin: 45px auto 0;
+      color: var(--forest);
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 4vw, 43px);
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    /* ==========================================
+       RESPONSIVE
+    ========================================== */
+
+    @media (max-width: 900px) {
+
+      .about-page-hero {
+        padding: 85px 20px 75px;
+      }
+
+      .story-section,
+      .founder-section,
+      .philosophy-section {
+        padding: 85px 0;
+      }
+
+      .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .founder-image-wrap {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .founder-content {
+        text-align: center;
+      }
+
+      .founder-content .gold-divider {
+        margin: 0 auto 30px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .about-page-hero {
+        padding: 65px 18px;
+      }
+
+      .story-section,
+      .founder-section,
+      .philosophy-section {
+        padding: 70px 0;
+      }
+
+      .story-text p,
+      .philosophy-description {
+        font-size: 13px;
+      }
+
+      .founder-image-wrap {
+        padding: 12px;
+      }
+
+      .founder-name {
+        font-size: 43px;
+      }
+
+      .founder-signature {
+        font-size: 55px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ========================================
+       PREMIUM HEADER
+  ========================================= -->
+
+  <header class="site-header" id="top">
+
+    <div class="navigation-bar">
+
+      <!-- LEFT NAVIGATION -->
+      <nav
+        class="nav-left"
+        aria-label="Navigation principale"
+        data-i18n-aria-label="primaryNavigation"
+      >
+
+        <a href="index.html"
+           class="nav-link"
+           data-i18n="navHome">
+          Accueil
+        </a>
+
+        <a href="apropos.html"
+           class="nav-link active"
+           aria-current="page"
+           data-i18n="navAbout">
+          À propos
+        </a>
+
+        <a href="prestations.html"
+           class="nav-link"
+           data-i18n="navServices">
+          Prestations
+        </a>
+
+      </nav>
+
+      <!-- CENTER LOGO -->
+      <div class="brand-area">
+
+        <a href="index.html" class="brand-link">
+
+          <img
+            src="IL%20Logo.png"
+            alt="INÈS LUXEA DÉCO"
+            class="brand-logo"
+          >
+
+          <span class="brand-name">
+            INÈS LUXEA DÉCO
+          </span>
+
+          <span class="brand-subtitle"
+                data-i18n="brandSubtitle">
+            DÉCORATION ÉVÉNEMENTIELLE
+          </span>
+
+        </a>
+
+      </div>
+
+      <!-- RIGHT NAVIGATION -->
+      <div class="header-right">
+
+        <nav class="nav-right"
+             aria-label="Navigation secondaire">
+
+          <a href="realisations.html"
+             class="nav-link"
+             data-i18n="navPortfolio">
+            Réalisations
+          </a>
+
+          <a href="contact.html"
+             class="nav-link"
+             data-i18n="navContact">
+            Contact
+          </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+          <!-- FR | EN -->
+          <div
+            class="language-switcher"
+            role="group"
+            aria-label="Choix de la langue"
+            data-i18n-aria-label="languageChoice"
+          >
+
+            <button
+              type="button"
+              class="language-btn active"
+              data-lang="fr"
+              aria-pressed="true">
+              FR
+            </button>
+
+            <span class="language-divider"
+                  aria-hidden="true">|</span>
+
+            <button
+              type="button"
+              class="language-btn"
+              data-lang="en"
+              aria-pressed="false">
+              EN
+            </button>
+
+          </div>
+
+          <a href="contact.html"
+             class="header-quote-btn"
+             data-i18n="requestQuote">
+            Demander un devis
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Ouvrir le menu"
+        data-i18n-aria-label="openMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- MOBILE NAVIGATION -->
+      <nav
+        class="primary-navigation mobile-navigation"
+        id="primary-navigation"
+        aria-label="Navigation mobile"
+      >
+
+        <a href="index.html"
+           class="nav-link"
+           data-i18n="navHome">
+          Accueil
+        </a>
+
+        <a href="apropos.html"
+           class="nav-link active"
+           aria-current="page"
+           data-i18n="navAbout">
+          À propos
+        </a>
+
+        <a href="prestations.html"
+           class="nav-link"
+           data-i18n="navServices">
+          Prestations
+        </a>
+
+        <a href="realisations.html"
+           class="nav-link"
+           data-i18n="navPortfolio">
+          Réalisations
+        </a>
+
+        <a href="contact.html"
+           class="nav-link"
+           data-i18n="navContact">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ========================================
+       MAIN CONTENT
+  ========================================= -->
+
+  <main id="main-content" class="about-page">
+
+
+    <!-- ========================================
+         ABOUT PAGE INTRODUCTION
+    ========================================= -->
+
+    <section class="about-page-hero">
+
+      <div class="container">
+
+        <p class="section-eyebrow"
+           data-i18n="aboutPageEyebrow">
+          DÉCOUVREZ NOTRE UNIVERS
+        </p>
+
+        <h1>
+
+          <span data-i18n="aboutPageTitleOne">
+            À propos
+          </span>
+
+          <em data-i18n="aboutPageTitleTwo">
+            de nous
+          </em>
+
+        </h1>
+
+        <p class="about-page-hero-description"
+           data-i18n="aboutPageIntroduction">
+
+          Derrière chaque création se trouvent
+          une passion, une vision et le désir
+          de rendre vos moments inoubliables.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         SECTION 1
+         MON HISTOIRE, MA PASSION
+    ========================================= -->
+
+    <section class="story-section"
+             id="notre-histoire">
+
+      <div class="container story-inner">
+
+        <p class="section-eyebrow"
+           data-i18n="storyEyebrow">
+          L'HISTOIRE D'UNE PASSION
+        </p>
+
+        <h2 class="section-title">
+
+          <span data-i18n="storyTitleOne">
+            Mon histoire,
+          </span>
+
+          <em data-i18n="storyTitleTwo">
+            ma passion
+          </em>
+
+        </h2>
+
+        <div class="story-divider"></div>
+
+        <div class="story-text">
+
+          <p data-i18n="storyParagraphOne">
+            Pour moi, la décoration est bien plus
+            qu'un simple assemblage de couleurs,
+            de fleurs et de matières. C'est une
+            manière de donner vie aux émotions
+            et de raconter une histoire à travers
+            chaque détail.
+          </p>
+
+          <p data-i18n="storyParagraphTwo">
+            C'est cette passion pour les belles
+            ambiances et les moments précieux
+            qui m'anime dans la création
+            d'INÈS LUXEA DÉCO.
+          </p>
+
+          <p data-i18n="storyParagraphThree">
+            À travers chaque projet, je souhaite
+            imaginer des décors élégants,
+            personnalisés et mémorables,
+            qui reflètent la personnalité
+            et les rêves de ceux qui me font confiance.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         SECTION 2
+         NOTRE FONDATRICE
+    ========================================= -->
+
+    <section class="founder-section"
+             id="notre-fondatrice">
+
+      <div class="container founder-grid">
+
+        <!-- APPROVED FOUNDER IMAGE -->
+        <div class="founder-image-wrap">
+
+          <img
+            src="fondatrice.png"
+            alt="Présentation de la fondatrice d'INÈS LUXEA DÉCO"
+            class="founder-image"
+            loading="lazy"
+          >
+
+        </div>
+
+        <!-- FOUNDER INTRODUCTION -->
+        <div class="founder-content">
+
+          <p class="section-eyebrow"
+             data-i18n="founderEyebrow">
+            NOTRE FONDATRICE
+          </p>
+
+          <h2 class="founder-name">
+            Sevie Inès MATONDO
+          </h2>
+
+          <p class="founder-role"
+             data-i18n="founderRole">
+            FONDATRICE & PDG
+          </p>
+
+          <div class="gold-divider"></div>
+
+          <p data-i18n="founderParagraphOne">
+            À la tête d'INÈS LUXEA DÉCO,
+            Sevie Inès MATONDO porte une vision
+            où l'élégance rencontre la créativité
+            et où chaque célébration mérite
+            une attention particulière.
+          </p>
+
+          <p data-i18n="founderParagraphTwo">
+            Son approche privilégie l'écoute,
+            l'harmonie et le sens du détail
+            afin de créer des univers qui
+            correspondent aux envies
+            de chaque client.
+          </p>
+
+          <div class="founder-signature"
+               aria-label="Inès">
+            Inès
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         SECTION 3
+         NOTRE PHILOSOPHIE
+    ========================================= -->
+
+    <section class="philosophy-section"
+             id="notre-philosophie">
+
+      <div class="container philosophy-inner">
+
+        <p class="section-eyebrow"
+           data-i18n="philosophyEyebrow">
+          NOTRE PHILOSOPHIE
+        </p>
+
+        <h2 class="section-title">
+
+          <span data-i18n="philosophyTitleOne">
+            L'élégance dans
+          </span>
+
+          <em data-i18n="philosophyTitleTwo">
+            chaque détail
+          </em>
+
+        </h2>
+
+        <p class="philosophy-description"
+           data-i18n="philosophyDescription">
+
+          Nous croyons que chaque événement
+          mérite une décoration unique.
+          Notre engagement est de créer
+          des ambiances harmonieuses,
+          raffinées et pensées autour
+          de votre histoire.
+
+        </p>
+
+        <div class="story-divider"></div>
+
+        <p class="philosophy-quote"
+           data-i18n="philosophyQuote">
+          « Chaque détail raconte une histoire,
+          chaque création révèle une émotion. »
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ========================================
+       PREMIUM FOOTER
+  ========================================= -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+
+        <img
+          src="IL%20Logo.png"
+          alt="INÈS LUXEA DÉCO"
+          class="footer-logo"
+        >
+
+        <h2>INÈS LUXEA DÉCO</h2>
+
+        <p data-i18n="brandSubtitle">
+          DÉCORATION ÉVÉNEMENTIELLE
+        </p>
+
+      </div>
+
+      <nav
+        class="footer-navigation"
+        aria-label="Navigation de pied de page"
+        data-i18n-aria-label="footerNavigation"
+      >
+
+        <a href="index.html"
+           data-i18n="navHome">Accueil</a>
+
+        <a href="apropos.html"
+           data-i18n="navAbout">À propos</a>
+
+        <a href="prestations.html"
+           data-i18n="navServices">Prestations</a>
+
+        <a href="realisations.html"
+           data-i18n="navPortfolio">Réalisations</a>
+
+        <a href="contact.html"
+           data-i18n="navContact">Contact</a>
+
+      </nav>
+
+      <div class="footer-contact">
+
+        <h3 data-i18n="footerContactTitle">
+          Parlons de votre événement
+        </h3>
+
+        <a href="contact.html"
+           class="footer-contact-link"
+           data-i18n="requestQuote">
+          Demander un devis
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+      <p>
+        © <span id="current-year">2026</span>
+        INÈS LUXEA DÉCO.
+        <span data-i18n="rightsReserved">
+          Tous droits réservés.
+        </span>
+      </p>
+
+      <p>
+        <span data-i18n="developedBy">
+          Site développé par
+        </span>
+
+        <span class="developer-name">
+          GODZYA GROUP
+        </span>
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ========================================
+       ABOUT PAGE FR / EN TRANSLATIONS
+       EXTENDS SHARED SCRIPT.JS
+  ========================================= -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const aboutTranslations = {
+
+        fr: {
+
+          aboutPageEyebrow:
+            "DÉCOUVREZ NOTRE UNIVERS",
+
+          aboutPageTitleOne:
+            "À propos",
+
+          aboutPageTitleTwo:
+            "de nous",
+
+          aboutPageIntroduction:
+            "Derrière chaque création se trouvent une passion, une vision et le désir de rendre vos moments inoubliables.",
+
+          storyEyebrow:
+            "L'HISTOIRE D'UNE PASSION",
+
+          storyTitleOne:
+            "Mon histoire,",
+
+          storyTitleTwo:
+            "ma passion",
+
+          storyParagraphOne:
+            "Pour moi, la décoration est bien plus qu'un simple assemblage de couleurs, de fleurs et de matières. C'est une manière de donner vie aux émotions et de raconter une histoire à travers chaque détail.",
+
+          storyParagraphTwo:
+            "C'est cette passion pour les belles ambiances et les moments précieux qui m'anime dans la création d'INÈS LUXEA DÉCO.",
+
+          storyParagraphThree:
+            "À travers chaque projet, je souhaite imaginer des décors élégants, personnalisés et mémorables, qui reflètent la personnalité et les rêves de ceux qui me font confiance.",
+
+          founderEyebrow:
+            "NOTRE FONDATRICE",
+
+          founderRole:
+            "FONDATRICE & CEO",
+
+          founderParagraphOne:
+            "À la tête d'INÈS LUXEA DÉCO, Sevie Inès MATONDO porte une vision où l'élégance rencontre la créativité et où chaque célébration mérite une attention particulière.",
+
+          founderParagraphTwo:
+            "Son approche privilégie l'écoute, l'harmonie et le sens du détail afin de créer des univers qui correspondent aux envies de chaque client.",
+
+          philosophyEyebrow:
+            "NOTRE PHILOSOPHIE",
+
+          philosophyTitleOne:
+            "L'élégance dans",
+
+          philosophyTitleTwo:
+            "chaque détail",
+
+          philosophyDescription:
+            "Nous croyons que chaque événement mérite une décoration unique. Notre engagement est de créer des ambiances harmonieuses, raffinées et pensées autour de votre histoire.",
+
+          philosophyQuote:
+            "« Chaque détail raconte une histoire, chaque création révèle une émotion. »"
+
+        },
+
+        en: {
+
+          aboutPageEyebrow:
+            "DISCOVER OUR WORLD",
+
+          aboutPageTitleOne:
+            "About",
+
+          aboutPageTitleTwo:
+            "us",
+
+          aboutPageIntroduction:
+            "Behind every creation lies a passion, a vision and the desire to make your moments unforgettable.",
+
+          storyEyebrow:
+            "A STORY OF PASSION",
+
+          storyTitleOne:
+            "My story,",
+
+          storyTitleTwo:
+            "my passion",
+
+          storyParagraphOne:
+            "For me, decoration is much more than a combination of colours, flowers and materials. It is a way of bringing emotions to life and telling a story through every detail.",
+
+          storyParagraphTwo:
+            "It is this passion for beautiful settings and precious moments that inspires me in creating INÈS LUXEA DÉCO.",
+
+          storyParagraphThree:
+            "Through every project, I aim to create elegant, personalised and memorable settings that reflect the personalities and dreams of those who place their trust in me.",
+
+          founderEyebrow:
+            "OUR FOUNDER",
+
+          founderRole:
+            "FOUNDER & CEO",
+
+          founderParagraphOne:
+            "As the founder of INÈS LUXEA DÉCO, Sevie Inès MATONDO brings a vision where elegance meets creativity and every celebration deserves special attention.",
+
+          founderParagraphTwo:
+            "Her approach focuses on listening, harmony and attention to detail to create settings that reflect each client's wishes.",
+
+          philosophyEyebrow:
+            "OUR PHILOSOPHY",
+
+          philosophyTitleOne:
+            "Elegance in",
+
+          philosophyTitleTwo:
+            "every detail",
+
+          philosophyDescription:
+            "We believe every event deserves a unique setting. Our commitment is to create harmonious, refined atmospheres inspired by your story.",
+
+          philosophyQuote:
+            "“Every detail tells a story, every creation reveals an emotion.”"
+
+        }
+
+      };
+
+      /*
+       Extend the existing shared translation system.
+       The homepage translations remain unchanged.
+      */
+
+      if (typeof translations !== "undefined") {
+
+        Object.assign(
+          translations.fr,
+          aboutTranslations.fr
+        );
+
+        Object.assign(
+          translations.en,
+          aboutTranslations.en
+        );
+
+      }
+
+      /*
+       Translate About-page text on initial load
+       and whenever the language changes.
+      */
+
+      function updateAboutLanguage(language) {
+
+        const selectedLanguage =
+          language === "en" ? "en" : "fr";
+
+        document.querySelectorAll(
+          "[data-i18n]"
+        ).forEach(function (element) {
+
+          const key = element.dataset.i18n;
+
+          const value =
+            aboutTranslations[selectedLanguage][key];
+
+          if (typeof value === "string") {
+            element.textContent = value;
+          }
+
+        });
+
+      }
+
+      /*
+       Listen to the existing FR / EN buttons.
+      */
+
+      document.querySelectorAll(
+        ".language-btn"
+      ).forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+          updateAboutLanguage(
+            button.dataset.lang
+          );
+
+        });
+
+      });
+
+      /*
+       Use the language selected by the shared script.
+      */
+
+      updateAboutLanguage(
+        document.documentElement.lang
+      );
+
+    });
+
+  </script>
+
+</body>
+</html>

@@ -251,3 +251,40 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
   position: relative;
   z-index: 1;
 }
+
+/* ==========================================
+   CONTINUOUS FLORAL BACKGROUND
+   QUOTATION + OUR VALUES
+========================================== */
+
+.floral-background-wrapper {
+  position: relative;
+
+  background-color: #f6f0e7;
+
+  background-image:
+    linear-gradient(
+      rgba(246, 240, 231, 0.35),
+      rgba(246, 240, 231, 0.35)
+    ),
+    url("floral-background.png");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Allow the background to flow through both sections */
+
+.floral-background-wrapper .quote-section,
+.floral-background-wrapper .values-section {
+  background: transparent;
+}
+
+/* Preserve content readability */
+
+.floral-background-wrapper .quote-content,
+.floral-background-wrapper .values-grid {
+  position: relative;
+  z-index: 1;
+}

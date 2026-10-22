@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
         content="Découvrez l'histoire, la passion et la vision d'INÈS LUXEA DÉCO.">
@@ -21,13 +23,18 @@
     rel="stylesheet"
   >
 
+  <!-- WEBSITE ASSETS -->
   <link rel="icon" type="image/png" href="IL%20Logo.png">
+
   <link rel="stylesheet" href="style.css">
+
   <script src="script.js" defer></script>
 
+  <!-- ABOUT PAGE STYLING -->
   <style>
 
     /* ==========================================
+       INÈS LUXEA DÉCO
        ABOUT PAGE — PREMIUM EDITORIAL DESIGN
     ========================================== */
 
@@ -84,7 +91,7 @@
     }
 
     /* ==========================================
-       SECTION 1 — MON HISTOIRE, MA PASSION
+       SECTION 1 — OUR STORY
     ========================================== */
 
     .story-section {
@@ -126,7 +133,7 @@
     }
 
     /* ==========================================
-       SECTION 2 — NOTRE FONDATRICE
+       SECTION 2 — OUR FOUNDER
     ========================================== */
 
     .founder-section {
@@ -206,7 +213,7 @@
     }
 
     /* ==========================================
-       SECTION 3 — NOTRE PHILOSOPHIE
+       SECTION 3 — OUR PHILOSOPHY
     ========================================== */
 
     .philosophy-section {
@@ -248,7 +255,7 @@
     }
 
     /* ==========================================
-       RESPONSIVE DESIGN
+       RESPONSIVE
     ========================================== */
 
     @media (max-width: 900px) {
@@ -878,6 +885,23 @@
             "NOTRE PHILOSOPHIE",
 
           philosophyTitleOne:
+            "L'élégance d
+
+
+Resend me this 
+
+Of course, Partner! 💎🌸
+
+Your message was cut off at philosophyTitleOne. Here is the complete remaining code, starting exactly where it stopped.
+
+Paste this immediately after:
+
+philosophyTitleOne:
+  "L'élégance d
+
+First, delete that incomplete line and replace it with everything below:
+
+          philosophyTitleOne:
             "L'élégance dans",
 
           philosophyTitleTwo:
@@ -895,140 +919,3 @@
 
           aboutPageEyebrow:
             "DISCOVER OUR WORLD",
-
-          aboutPageTitleOne:
-            "About",
-
-          aboutPageTitleTwo:
-            "us",
-
-          aboutPageIntroduction:
-            "Behind every creation lies a passion, a vision and the desire to make your moments unforgettable.",
-
-          storyEyebrow:
-            "A STORY OF PASSION",
-
-          storyTitleOne:
-            "My story,",
-
-          storyTitleTwo:
-            "my passion",
-
-          storyParagraphOne:
-            "For me, decoration is much more than a combination of colours, flowers and materials. It is a way of bringing emotions to life and telling a story through every detail.",
-
-          storyParagraphTwo:
-            "It is this passion for beautiful settings and precious moments that inspires me in creating INÈS LUXEA DÉCO.",
-
-          storyParagraphThree:
-            "Through every project, I aim to create elegant, personalised and memorable settings that reflect the personalities and dreams of those who place their trust in me.",
-
-          founderEyebrow:
-            "OUR FOUNDER",
-
-          founderRole:
-            "FOUNDER & CEO",
-
-          founderParagraphOne:
-            "As the founder of INÈS LUXEA DÉCO, Sevie Inès MATONDO brings a vision where elegance meets creativity and every celebration deserves special attention.",
-
-          founderParagraphTwo:
-            "Her approach focuses on listening, harmony and attention to detail to create settings that reflect each client's wishes.",
-
-          philosophyEyebrow:
-            "OUR PHILOSOPHY",
-
-          philosophyTitleOne:
-            "Elegance in",
-
-          philosophyTitleTwo:
-            "every detail",
-
-          philosophyDescription:
-            "We believe every event deserves a unique setting. Our commitment is to create harmonious, refined atmospheres inspired by your story.",
-
-          philosophyQuote:
-            "“Every detail tells a story, every creation reveals an emotion.”"
-
-        }
-
-      };
-
-      /*
-       Extend the existing shared translation system.
-       The homepage translations remain unchanged.
-      */
-
-      if (typeof translations !== "undefined") {
-
-        Object.assign(
-          translations.fr,
-          aboutTranslations.fr
-        );
-
-        Object.assign(
-          translations.en,
-          aboutTranslations.en
-        );
-
-      }
-
-      /*
-       Translate About-page text on initial load
-       and whenever the language changes.
-      */
-
-      function updateAboutLanguage(language) {
-
-        const selectedLanguage =
-          language === "en" ? "en" : "fr";
-
-        document.querySelectorAll(
-          "[data-i18n]"
-        ).forEach(function (element) {
-
-          const key = element.dataset.i18n;
-
-          const value =
-            aboutTranslations[selectedLanguage][key];
-
-          if (typeof value === "string") {
-            element.textContent = value;
-          }
-
-        });
-
-      }
-
-      /*
-       Listen to the existing FR / EN buttons.
-      */
-
-      document.querySelectorAll(
-        ".language-btn"
-      ).forEach(function (button) {
-
-        button.addEventListener("click", function () {
-
-          updateAboutLanguage(
-            button.dataset.lang
-          );
-
-        });
-
-      });
-
-      /*
-       Use the language selected by the shared script.
-      */
-
-      updateAboutLanguage(
-        document.documentElement.lang
-      );
-
-    });
-
-  </script>
-
-</body>
-</html>

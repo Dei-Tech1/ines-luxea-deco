@@ -211,3 +211,43 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
   border-radius: 50%;
   clip-path: circle(50% at 50% 50%);
 }
+
+/* ==========================================
+   INÈS LUXEA DÉCO
+   CONTINUOUS FLORAL BACKGROUND
+   QUOTE + VALUES
+========================================== */
+
+.quote-section,
+.values-section {
+  background-color: #f6f0e7;
+
+  background-image:
+    linear-gradient(
+      rgba(246, 240, 231, 0.50),
+      rgba(246, 240, 231, 0.50)
+    ),
+    url("floral-background.png");
+
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* First section — upper part of artwork */
+.quote-section {
+  background-position: center top;
+}
+
+/* Second section — lower part of artwork */
+.values-section {
+  background-position: center bottom;
+  border-top: none;
+}
+
+/* Keep all content readable */
+.quote-content,
+.values-grid {
+  position: relative;
+  z-index: 1;
+}

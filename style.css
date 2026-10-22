@@ -288,3 +288,36 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
   position: relative;
   z-index: 1;
 }
+
+/* ==========================================
+   NOTRE FONDATRICE — APPROVED DESIGN
+========================================== */
+
+.founder-section {
+  padding: 100px 0;
+  background: var(--ivory);
+}
+
+.founder-approved-design {
+  display: block;
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .founder-section {
+    padding: 65px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .founder-section {
+    padding: 40px 0;
+  }
+
+  .founder-section .container {
+    width: 100%;
+  }
+}

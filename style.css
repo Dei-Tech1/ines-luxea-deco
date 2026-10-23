@@ -460,3 +460,89 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
   }
 
 }
+/* ==========================================
+   FOUNDER VALUES — EXTRA LARGE LUXURY DESIGN
+========================================== */
+
+/* MORE SPACE FOR EACH VALUE */
+
+.founder-values {
+  margin: 45px 0 35px;
+  padding: 35px 0;
+}
+
+.founder-value {
+  padding: 0 20px;
+}
+
+/* LARGE GOLD ICONS */
+
+.founder-value-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+  color: #b88b49;
+}
+
+/* LARGER HEADINGS */
+
+.founder-value h3 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 15px;
+}
+
+/* LARGER DESCRIPTIONS */
+
+.founder-value p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #62594e;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .founder-value {
+    padding: 0 10px;
+  }
+
+  .founder-value-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .founder-value h3 {
+    font-size: 20px;
+  }
+
+  .founder-value p {
+    font-size: 13px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .founder-values {
+    padding: 25px 0;
+  }
+
+  .founder-value {
+    padding: 0 5px;
+  }
+
+  .founder-value-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .founder-value h3 {
+    font-size: 14px;
+  }
+
+  .founder-value p {
+    font-size: 11px;
+  }
+}

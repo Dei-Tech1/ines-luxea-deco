@@ -546,3 +546,29 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
     font-size: 11px;
   }
 }
+
+/* ICONS — SLIGHTLY BIGGER */
+
+.founder-value-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  color: #b88b49;
+}
+
+/* HEADINGS — ORIGINAL ELEGANT SIZE */
+
+.founder-value h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTIONS — ORIGINAL SIZE */
+
+.founder-value p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #62594e;
+}

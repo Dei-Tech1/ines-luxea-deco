@@ -412,3 +412,51 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
     line-height: 1.5;
   }
 }
+
+/* ==========================================
+   FOUNDER VALUES — LARGER DESIGN
+========================================== */
+
+.founder-value-icon {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 18px;
+}
+
+.founder-value h3 {
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.founder-value p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.founder-value {
+  padding: 0 16px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .founder-value-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .founder-value h3 {
+    font-size: 16px;
+  }
+
+  .founder-value p {
+    font-size: 12px;
+  }
+
+  .founder-value {
+    padding: 0 8px;
+  }
+
+}

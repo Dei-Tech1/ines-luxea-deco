@@ -448,6 +448,52 @@
   color: #111111;
   font-weight: 600;
 }
+
+    /* ==========================================
+   SECTION 2 — NOTRE FONDATRICE
+   CREAMY SAGE GREEN • CHAMPAGNE • GOLD
+========================================== */
+
+.founder-section {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(212, 175, 115, 0.22),
+      transparent 42%
+    ),
+
+    radial-gradient(
+      circle at 12% 85%,
+      rgba(165, 185, 158, 0.30),
+      transparent 48%
+    ),
+
+    linear-gradient(
+      135deg,
+      #edf1e8 0%,
+      #f7f4e9 45%,
+      #f1e5d2 100%
+    );
+
+  padding: 130px 0;
+}
+
+/* Keep founder content above background */
+
+.founder-section .founder-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .founder-section {
+    padding: 85px 0;
+  }
+}
     
   </style>
 

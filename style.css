@@ -321,3 +321,66 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
     width: 100%;
   }
 }
+
+/* ==========================================
+   FOUNDER VALUES — PREMIUM DESIGN
+   CRÉATIVITÉ • ÉLÉGANCE • PASSION
+========================================== */
+
+.founder-values {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+
+  margin: 32px 0 24px;
+}
+
+.founder-values span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 18px;
+
+  background: #faf8f3;
+  border: 1px solid rgba(184, 139, 73, 0.45);
+
+  color: #263c30;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.founder-values span:hover {
+  background: #f2eadc;
+  border-color: #b88b49;
+  transform: translateY(-3px);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .founder-values {
+    gap: 8px;
+    margin: 25px 0 20px;
+  }
+
+  .founder-values span {
+    padding: 10px 12px;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+}

@@ -556,14 +556,27 @@ a:focus-visible,button:focus-visible,.service-card:focus-visible{outline:2px sol
   color: #b88b49;
 }
 
-/* HEADINGS — ORIGINAL ELEGANT SIZE */
+/* ==========================================
+   FOUNDER — FEMININE TOUCH NAME ARTWORK
+========================================== */
 
-.founder-value h3 {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
+.founder-name-art {
+  display: block;
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 12px;
+  object-fit: contain;
+  background: transparent;
+  filter: none;
 }
+
+@media (max-width: 600px) {
+  .founder-name-art {
+    width: 260px;
+  }
+}
+
 
 /* DESCRIPTIONS — ORIGINAL SIZE */
 
